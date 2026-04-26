@@ -1,0 +1,2682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Software Development Agreement — DealatCity × Centrix Plus | CXP-DCT-2026-001</title>
+<style>
+  /* ============= RESET & BASE ============= */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0b1220;
+    --ink-2: #1e293b;
+    --ink-3: #334155;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --line-2: #cbd5e1;
+    --bg: #ffffff;
+    --bg-soft: #f8fafc;
+    --bg-tint: #f1f5f9;
+    --brand: #0f3460;
+    --brand-2: #1e3a8a;
+    --accent: #c8932b;
+    --accent-soft: #fef3c7;
+    --success: #065f46;
+    --success-soft: #d1fae5;
+    --danger: #991b1b;
+    --danger-soft: #fee2e2;
+    --shadow: 0 1px 2px rgba(15,23,42,.06), 0 8px 24px rgba(15,23,42,.06);
+    --shadow-lg: 0 10px 40px rgba(15,23,42,.12);
+  }
+
+  html, body {
+    background: #f1f5f9;
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .doc {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--bg);
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* ============= TYPE ============= */
+  h1, h2, h3, h4 {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .display {
+    font-size: 38pt;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+  h2.section-title {
+    font-size: 18pt;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+  h2.section-title::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 22px;
+    background: var(--accent);
+    margin-right: 12px;
+    vertical-align: -4px;
+    border-radius: 2px;
+  }
+  h3 {
+    font-size: 12pt;
+    font-weight: 700;
+    margin: 14px 0 8px 0;
+  }
+  h4 {
+    font-size: 9.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  p { margin: 0 0 10px 0; color: var(--ink-3); }
+  strong { color: var(--ink); font-weight: 600; }
+  .lead {
+    font-size: 11.5pt;
+    color: var(--ink-2);
+    line-height: 1.65;
+  }
+
+  /* ============= LAYOUT ============= */
+  section {
+    padding: 50px 60px;
+    border-bottom: 1px solid var(--line);
+  }
+  section:last-child { border-bottom: none; }
+
+  .section-header {
+    margin-bottom: 24px;
+  }
+  .section-header .eyebrow {
+    display: inline-block;
+    font-size: 8.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .section-header .lead {
+    margin-top: 8px;
+    max-width: 680px;
+  }
+
+  /* ============= COVER ============= */
+  .cover {
+    background:
+      radial-gradient(1100px 500px at 90% -10%, rgba(200,147,43,0.18), transparent 60%),
+      radial-gradient(900px 600px at -10% 110%, rgba(30,58,138,0.45), transparent 55%),
+      linear-gradient(135deg, #0b1220 0%, #0f3460 55%, #1e3a8a 100%);
+    color: #fff;
+    padding: 54px 60px 48px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+  }
+  .cover > * { position: relative; z-index: 1; }
+  .cover-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    padding-bottom: 18px;
+    margin-bottom: 36px;
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 13pt;
+    letter-spacing: -0.01em;
+  }
+  .logo-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: var(--accent);
+    color: var(--ink);
+    font-weight: 800;
+    margin-right: 10px;
+    vertical-align: -8px;
+    font-size: 13pt;
+  }
+  .doc-meta {
+    text-align: right;
+    font-size: 9pt;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+  }
+  .doc-meta strong { color: #fff; }
+
+  .cover h1.display { color: #fff; }
+  .cover-tag {
+    display: inline-block;
+    background: rgba(200,147,43,0.18);
+    border: 1px solid rgba(200,147,43,0.5);
+    color: #fcd34d;
+    font-size: 8.5pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 5px 14px;
+    border-radius: 100px;
+    margin-bottom: 18px;
+  }
+  .cover-sub {
+    color: rgba(255,255,255,0.85);
+    font-size: 12pt;
+    margin-top: 14px;
+    max-width: 640px;
+    line-height: 1.5;
+  }
+
+  .parties {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 24px;
+    align-items: center;
+    margin-top: 38px;
+    padding: 24px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+  }
+  .party h4 {
+    color: rgba(255,255,255,0.6);
+    font-size: 8.5pt;
+    margin-bottom: 6px;
+  }
+  .party .name {
+    color: #fff;
+    font-weight: 700;
+    font-size: 13pt;
+    line-height: 1.3;
+  }
+  .party .role {
+    color: rgba(255,255,255,0.65);
+    font-size: 9pt;
+    margin-top: 2px;
+  }
+  .between {
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    font-size: 9pt;
+  }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: 30px;
+  }
+  .stat {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 16px 16px;
+  }
+  .stat .num {
+    font-size: 22pt;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .stat .num small {
+    font-size: 11pt;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0;
+  }
+  .stat .label {
+    font-size: 8.5pt;
+    color: rgba(255,255,255,0.65);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-top: 8px;
+  }
+
+  /* ============= TABLES ============= */
+  table.info {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 10pt;
+  }
+  table.info th, table.info td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+  }
+  table.info tr:last-child th, table.info tr:last-child td { border-bottom: none; }
+  table.info th {
+    background: var(--bg-soft);
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 9pt;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    width: 32%;
+  }
+  table.info td {
+    background: #fff;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* ============= EXEC SUMMARY ============= */
+  .exec-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+  .pillar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+  }
+  .pillar-list li {
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--brand);
+    padding: 12px 14px;
+    border-radius: 6px;
+    font-size: 10pt;
+    color: var(--ink-2);
+  }
+  .pillar-list li strong { display: block; color: var(--ink); margin-bottom: 2px; }
+
+  /* ============= METHODOLOGY ============= */
+  .method {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 6px;
+  }
+  .method-step {
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 14px 14px 14px;
+    text-align: center;
+  }
+  .method-step::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    width: 14px;
+    height: 2px;
+    background: var(--line-2);
+    transform: translateY(-50%);
+  }
+  .method-step:last-child::before { display: none; }
+  .method-step .num {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--brand);
+    color: #fff;
+    font-weight: 700;
+    font-size: 11pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px auto;
+  }
+  .method-step h4 {
+    color: var(--ink);
+    font-size: 10pt;
+    margin-bottom: 4px;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .method-step p {
+    font-size: 9pt;
+    color: var(--muted);
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  /* ============= SCOPE CARDS ============= */
+  .scope-card {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-bottom: 16px;
+    background: #fff;
+    page-break-inside: avoid;
+  }
+  .scope-card-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  .scope-icon {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .scope-icon svg { width: 20px; height: 20px; }
+  .scope-card-head .title-block { flex: 1; }
+  .scope-card-head h3 {
+    margin: 0 0 4px 0;
+    font-size: 13pt;
+    color: var(--ink);
+  }
+  .scope-card-head .index {
+    font-size: 9pt;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+  }
+
+  .scope-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 8px;
+  }
+  .scope-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .scope-body ul li {
+    font-size: 9.5pt;
+    color: var(--ink-3);
+    padding-left: 18px;
+    position: relative;
+    margin-bottom: 5px;
+    line-height: 1.5;
+  }
+  .scope-body ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .modules-tag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+  .modules-tag .tag {
+    font-size: 8.5pt;
+    font-weight: 600;
+    color: var(--brand);
+    background: rgba(15,52,96,0.08);
+    padding: 4px 10px;
+    border-radius: 100px;
+    border: 1px solid rgba(15,52,96,0.15);
+  }
+  .deliverable-line {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--line);
+    font-size: 9pt;
+    color: var(--muted);
+  }
+  .deliverable-line strong {
+    color: var(--success);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 8.5pt;
+    margin-right: 8px;
+  }
+
+  /* ============= TIMELINE ============= */
+  .gantt {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .gantt-header, .gantt-row {
+    display: grid;
+    grid-template-columns: 200px 1fr 140px;
+    align-items: center;
+  }
+  .gantt-header {
+    background: var(--bg-soft);
+    border-bottom: 1px solid var(--line);
+    font-size: 8.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+  }
+  .gantt-header > div { padding: 10px 14px; }
+  .gantt-row {
+    border-bottom: 1px solid var(--line);
+    font-size: 9.5pt;
+  }
+  .gantt-row:last-child { border-bottom: none; }
+  .gantt-row .phase-name {
+    padding: 14px 14px;
+  }
+  .gantt-row .phase-name strong { display: block; color: var(--ink); }
+  .gantt-row .phase-name span { font-size: 8.5pt; color: var(--muted); }
+  .gantt-row .bar-cell {
+    padding: 14px 14px;
+    position: relative;
+    height: 100%;
+  }
+  .bar-track {
+    position: relative;
+    height: 22px;
+    background: var(--bg-tint);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .bar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, var(--brand) 0%, var(--brand-2) 100%);
+    border-radius: 4px;
+    color: #fff;
+    font-size: 8.5pt;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    white-space: nowrap;
+  }
+  .bar.gold { background: linear-gradient(90deg, #b88a2b, var(--accent)); }
+  .bar.green { background: linear-gradient(90deg, #047857, #10b981); }
+  .week-axis {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    margin-top: 4px;
+    font-size: 8pt;
+    color: var(--muted);
+  }
+  .week-axis-12 { grid-template-columns: repeat(12, 1fr); font-size: 7.5pt; }
+  .week-axis div { text-align: center; padding: 2px 0; }
+  .gantt-row .milestone {
+    padding: 14px 14px;
+    text-align: right;
+    font-size: 9pt;
+    color: var(--ink-2);
+  }
+  .gantt-row .milestone .pill {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 8pt;
+    font-weight: 700;
+    margin-top: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid rgba(200,147,43,0.4);
+  }
+  .gantt-row .milestone .pill.green {
+    background: var(--success-soft);
+    color: var(--success);
+    border-color: rgba(6,95,70,0.3);
+  }
+
+  /* ============= PRICING ============= */
+  .price-hero {
+    background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%);
+    color: #fff;
+    border-radius: 14px;
+    padding: 30px 32px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 28px;
+    align-items: center;
+    margin-bottom: 18px;
+    box-shadow: var(--shadow);
+  }
+  .price-hero .label {
+    font-size: 9pt;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 8px;
+  }
+  .price-hero h3 {
+    color: #fff;
+    font-size: 17pt;
+    margin: 0 0 6px 0;
+  }
+  .price-hero p {
+    color: rgba(255,255,255,0.85);
+    font-size: 9.5pt;
+    margin: 0;
+  }
+  .price-hero .amount {
+    text-align: right;
+  }
+  .price-hero .amount .big {
+    font-size: 38pt;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+  .price-hero .amount .big small {
+    font-size: 14pt;
+    color: var(--accent);
+    font-weight: 600;
+    margin-left: 4px;
+  }
+  .price-hero .amount .sub {
+    font-size: 9pt;
+    color: rgba(255,255,255,0.7);
+    margin-top: 4px;
+  }
+
+  .price-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 10pt;
+    margin-top: 10px;
+  }
+  .price-table th, .price-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+  }
+  .price-table thead th {
+    background: var(--bg-soft);
+    color: var(--muted);
+    font-size: 8.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .price-table tr:last-child td { border-bottom: none; }
+  .price-table .amt {
+    font-weight: 700;
+    color: var(--ink);
+    text-align: right;
+    white-space: nowrap;
+  }
+  .price-table .total-row td {
+    background: var(--ink);
+    color: #fff;
+    font-weight: 700;
+  }
+  .price-table .total-row .amt { color: var(--accent); font-size: 12pt; }
+  .price-table .opt-row td { background: #fffbf2; }
+
+  /* ============= FLOW DIAGRAM (vendor lifecycle) ============= */
+  .flow-diagram {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr auto 1fr;
+    gap: 8px;
+    align-items: stretch;
+    margin: 8px 0 24px 0;
+    padding: 22px 18px;
+    background: linear-gradient(135deg, var(--bg-soft), #fff);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+  }
+  .flow-node {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 14px 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .flow-node.primary {
+    background: linear-gradient(135deg, var(--accent) 0%, #b88a2b 100%);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  .flow-node.primary .flow-icon {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+  }
+  .flow-node.primary .flow-label { color: #fff; }
+  .flow-node.primary .flow-label strong { color: #fff; }
+  .flow-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .flow-icon svg { width: 18px; height: 18px; }
+  .flow-label {
+    font-size: 8.5pt;
+    color: var(--ink-2);
+    line-height: 1.35;
+    font-weight: 500;
+  }
+  .flow-arrow {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 14pt;
+    align-self: center;
+  }
+  .scope-icon.vendor-icon {
+    background: linear-gradient(135deg, var(--accent) 0%, #b88a2b 100%);
+  }
+
+  /* ============= ARCHITECTURE DIAGRAM ============= */
+  .arch-diagram {
+    display: grid;
+    grid-template-columns: 1.1fr 0.7fr 1.3fr 0.7fr 1.1fr;
+    gap: 4px;
+    align-items: stretch;
+    background: linear-gradient(135deg, var(--bg-soft), #fff);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 14px;
+    margin: 8px 0 12px 0;
+  }
+  .arch-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .arch-col.arch-center {
+    background: linear-gradient(180deg, rgba(15,52,96,0.04), rgba(15,52,96,0.01));
+    border: 1px dashed rgba(15,52,96,0.2);
+    border-radius: 10px;
+    padding: 8px;
+  }
+  .arch-tier-label {
+    font-size: 8pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    text-align: center;
+    padding: 6px 4px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+  }
+  .arch-tier-label.vendor {
+    background: rgba(200,147,43,0.12);
+    color: var(--accent);
+    border: 1px solid rgba(200,147,43,0.3);
+  }
+  .arch-tier-label.odoo {
+    background: var(--brand);
+    color: #fff;
+  }
+  .arch-tier-label.customer {
+    background: rgba(16,185,129,0.12);
+    color: #047857;
+    border: 1px solid rgba(16,185,129,0.3);
+  }
+  .arch-box {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-height: 54px;
+  }
+  .arch-box.accent {
+    border-color: var(--accent);
+    background: linear-gradient(180deg, #fffbf2, #fff);
+  }
+  .arch-box-icon {
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .arch-box.accent .arch-box-icon {
+    background: linear-gradient(135deg, var(--accent), #b88a2b);
+  }
+  .arch-box-icon svg { width: 14px; height: 14px; }
+  .arch-box-text {
+    flex: 1;
+    line-height: 1.25;
+  }
+  .arch-box-text strong {
+    display: block;
+    font-size: 8.5pt;
+    color: var(--ink);
+  }
+  .arch-box-text span {
+    display: block;
+    font-size: 7.5pt;
+    color: var(--muted);
+    margin-top: 1px;
+  }
+  .arch-flows {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 8px;
+    padding: 28px 0 8px 0;
+  }
+  .arch-flow {
+    position: relative;
+    text-align: center;
+    padding: 4px 0;
+  }
+  .flow-arrow-line {
+    position: absolute;
+    left: 6%;
+    right: 6%;
+    top: 50%;
+    height: 2px;
+    background: var(--accent);
+    transform: translateY(-50%);
+  }
+  .flow-arrow-tip {
+    position: absolute;
+    right: 4%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent);
+    font-size: 9pt;
+    line-height: 1;
+  }
+  .flow-arrow-tip-left {
+    left: 4%;
+    right: auto;
+  }
+  .arch-flow.flow-left .flow-arrow-line {
+    background: #047857;
+  }
+  .arch-flow.flow-left .flow-arrow-tip {
+    color: #047857;
+  }
+  .arch-flow-label {
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    padding: 2px 6px;
+    font-size: 7.5pt;
+    color: var(--ink-3);
+    line-height: 1.25;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    z-index: 1;
+  }
+  .arch-legend {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 8.5pt;
+    color: var(--muted);
+  }
+  .arch-legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .arch-legend-item .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .arch-legend-item .dot-blue { background: var(--brand); }
+  .arch-legend-item .dot-gold { background: var(--accent); }
+  .arch-legend-item .dot-arrow {
+    color: var(--accent);
+    font-size: 10pt;
+    background: transparent;
+    width: auto;
+    height: auto;
+  }
+
+  /* ============= HERO (12-Month Plan) ============= */
+  .hero-twin {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 14px;
+  }
+  .hero-twin .price-hero {
+    margin-bottom: 0;
+    padding: 26px 28px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .hero-twin .price-hero .amount { text-align: left; }
+  .hero-twin .price-hero .big { font-size: 32pt; }
+  .hero-twin .price-hero.year2 {
+    background: linear-gradient(135deg, #1a1a2e 0%, #2d1b4e 60%, #4c1d95 100%);
+  }
+  .hero-twin .price-hero.year2 .big small { color: #fcd34d; }
+
+  /* ============= INSTALLMENT STRIP ============= */
+  .install-strip {
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .install-cell {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 10px 6px 8px 6px;
+    text-align: center;
+    position: relative;
+  }
+  .install-cell .m {
+    font-size: 8pt;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+  .install-cell .kd {
+    font-size: 9pt;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .install-cell .trig {
+    font-size: 7.5pt;
+    color: var(--muted);
+    margin-top: 4px;
+    line-height: 1.2;
+  }
+  .install-cell.first {
+    background: linear-gradient(180deg, #fffbf2, #fff);
+    border-color: var(--accent);
+    border-width: 1.5px;
+  }
+  .install-cell.first .m { color: var(--accent); }
+  .install-cell.last {
+    background: linear-gradient(180deg, #ecfdf5, #fff);
+    border-color: #10b981;
+    border-width: 1.5px;
+  }
+  .install-cell.last .m { color: #047857; }
+  .install-cell.go-live {
+    background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    border-color: var(--brand-2);
+  }
+  .install-cell.go-live .m,
+  .install-cell.go-live .kd { color: #fff; }
+  .install-cell.go-live .trig { color: rgba(255,255,255,0.75); }
+
+  /* ============= PAYMENT STAGES ============= */
+  .payment-stages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .stage-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 22px 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .stage-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--brand);
+  }
+  .stage-card.gold::before { background: var(--accent); }
+  .stage-card.green::before { background: #10b981; }
+  .stage-card .stage-num {
+    font-size: 8.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+  }
+  .stage-card .pct {
+    font-size: 32pt;
+    font-weight: 800;
+    color: var(--ink);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin: 6px 0 4px 0;
+  }
+  .stage-card .pct small {
+    font-size: 14pt;
+    font-weight: 600;
+    color: var(--accent);
+    margin-left: 2px;
+  }
+  .stage-card .kd {
+    font-size: 11pt;
+    font-weight: 700;
+    color: var(--brand);
+    margin-top: 8px;
+  }
+  .stage-card .trigger {
+    margin-top: 10px;
+    font-size: 9pt;
+    color: var(--ink-3);
+    line-height: 1.5;
+  }
+
+  /* ============= INC / EXC ============= */
+  .twin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .col-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 22px 24px;
+  }
+  .col-card.included { border-top: 4px solid #10b981; }
+  .col-card.excluded { border-top: 4px solid #ef4444; }
+  .col-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 0;
+  }
+  .col-card h3 .badge {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11pt;
+    color: #fff;
+    font-weight: 800;
+  }
+  .col-card.included h3 .badge { background: #10b981; }
+  .col-card.excluded h3 .badge { background: #ef4444; }
+  .col-card ul { list-style: none; padding: 0; margin: 0; }
+  .col-card ul li {
+    font-size: 9.5pt;
+    padding: 6px 0 6px 22px;
+    position: relative;
+    color: var(--ink-3);
+    line-height: 1.45;
+    border-bottom: 1px dashed var(--line);
+  }
+  .col-card ul li:last-child { border-bottom: none; }
+  .col-card.included ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    color: #10b981;
+    font-weight: 800;
+  }
+  .col-card.excluded ul li::before {
+    content: "×";
+    position: absolute;
+    left: 2px;
+    top: 4px;
+    color: #ef4444;
+    font-weight: 800;
+    font-size: 13pt;
+  }
+
+  /* ============= ADD-ONS ============= */
+  .addon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .addon-card {
+    background: linear-gradient(180deg, #fffbf2, #fff);
+    border: 1px solid #f0d9a3;
+    border-radius: 12px;
+    padding: 22px;
+  }
+  .addon-card .label {
+    font-size: 8.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .addon-card h3 {
+    margin: 0 0 8px 0;
+    font-size: 12pt;
+  }
+  .addon-card p {
+    font-size: 9.5pt;
+    color: var(--ink-3);
+    margin: 0 0 14px 0;
+    line-height: 1.5;
+  }
+  .addon-card .price-line {
+    padding-top: 12px;
+    border-top: 1px solid #f0d9a3;
+    font-size: 11pt;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  /* ============= TERMS ============= */
+  .terms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .term-block {
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--brand);
+    border-radius: 8px;
+    padding: 14px 18px;
+  }
+  .term-block h4 {
+    color: var(--ink);
+    font-size: 9.5pt;
+    text-transform: none;
+    letter-spacing: 0;
+    margin-bottom: 4px;
+  }
+  .term-block p {
+    font-size: 9pt;
+    color: var(--ink-3);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* ============= EXECUTION STATEMENT ============= */
+  .execution-statement {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--brand);
+    border-radius: 10px;
+    padding: 20px 26px;
+    margin-bottom: 22px;
+    font-size: 9.5pt;
+    color: var(--ink-2);
+    line-height: 1.65;
+  }
+  .execution-statement p {
+    margin-bottom: 8px;
+    color: var(--ink-2);
+  }
+  .execution-statement ol {
+    margin: 0;
+    padding-left: 22px;
+  }
+  .execution-statement ol li {
+    margin-bottom: 6px;
+  }
+  .witness-block { margin-top: 8px; }
+
+  /* ============= SIGNATURE ============= */
+  .sign-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 20px;
+  }
+  .sign-block {
+    border: 2px solid var(--line);
+    border-radius: 12px;
+    padding: 28px 28px 22px 28px;
+    background: linear-gradient(180deg, var(--bg-soft), #fff);
+  }
+  .sign-block .role-tag {
+    display: inline-block;
+    background: var(--brand);
+    color: #fff;
+    font-size: 8.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+  }
+  .sign-block .sign-name {
+    font-size: 13pt;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .sign-block .sign-org {
+    font-size: 9.5pt;
+    color: var(--muted);
+    margin-bottom: 30px;
+  }
+  .sign-block .sign-line {
+    border-bottom: 1.5px solid var(--ink-3);
+    height: 36px;
+    margin-bottom: 6px;
+  }
+  .sign-block .sign-label {
+    font-size: 8.5pt;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .sign-block .sign-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 18px;
+    margin-top: 6px;
+  }
+
+  /* ============= FOOTER ============= */
+  .doc-footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 22px 60px;
+    font-size: 8.5pt;
+    letter-spacing: 0.05em;
+  }
+  .doc-footer strong { color: #fff; }
+
+  /* ============= UTILITIES ============= */
+  .callout {
+    background: linear-gradient(180deg, #fffbf2, #fff);
+    border: 1px solid #f0d9a3;
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 9.5pt;
+    color: var(--ink-2);
+    margin: 14px 0;
+  }
+  .callout strong { color: var(--accent); }
+
+  /* ============= PRINT ============= */
+  .print-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--ink);
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 10pt;
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    z-index: 100;
+    letter-spacing: 0.02em;
+  }
+  .print-btn:hover { background: var(--brand); }
+
+  @page {
+    size: A4;
+    margin: 14mm 12mm 14mm 12mm;
+  }
+  @page :first {
+    margin: 0;
+  }
+  @media print {
+    html, body {
+      background: #fff !important;
+      font-size: 10pt;
+    }
+    .doc {
+      box-shadow: none;
+      max-width: none;
+      margin: 0;
+      width: 100%;
+    }
+    .print-btn { display: none !important; }
+
+    /* Sections flow naturally — DON'T avoid breaks on whole sections (some are multi-page) */
+    section {
+      padding: 14px 0;
+      page-break-inside: auto;
+      break-inside: auto;
+      border-bottom: none;
+    }
+
+    /* Cover page — full bleed, dedicated page, must not split */
+    .cover {
+      padding: 24mm 16mm;
+      page-break-after: always;
+      break-after: page;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      min-height: 270mm;
+    }
+
+    /* Section headers should not get orphaned at bottom of page */
+    .section-header,
+    h2.section-title,
+    h3,
+    h4 {
+      page-break-after: avoid;
+      break-after: avoid-page;
+    }
+
+    /* Atomic blocks — never split these across pages */
+    .scope-card,
+    .stage-card,
+    .addon-card,
+    .col-card,
+    .price-hero,
+    .sign-block,
+    .term-block,
+    .stat,
+    .method-step,
+    .install-cell,
+    .arch-box,
+    .flow-node,
+    .pillar-list li,
+    .execution-statement,
+    .callout,
+    .gantt,
+    .arch-diagram,
+    .flow-diagram,
+    .install-strip {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    /* Tables — header repeats on each page, rows don't split */
+    table {
+      page-break-inside: auto;
+      break-inside: auto;
+    }
+    table tr {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    thead {
+      display: table-header-group;
+    }
+    tfoot {
+      display: table-footer-group;
+    }
+
+    /* Prevent single-line orphans/widows */
+    p, li {
+      orphans: 3;
+      widows: 3;
+    }
+
+    /* Force a page break before large sections so they start clean
+       (helps when a previous section ends near bottom of page) */
+    section.page-break-before {
+      page-break-before: always;
+      break-before: page;
+    }
+
+    /* Final footer should sit with last section */
+    .doc-footer {
+      page-break-before: avoid;
+      break-before: avoid;
+    }
+
+    /* Color preservation */
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color-adjust: exact !important;
+    }
+
+    /* Safety: prevent very tall single elements from being clipped */
+    .scope-card,
+    .price-hero,
+    .col-card {
+      max-height: 260mm;
+      overflow: visible;
+    }
+  }
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+
+<div class="doc">
+
+  <!-- ===================== COVER ===================== -->
+  <section class="cover">
+    <div class="cover-top">
+      <div class="logo">
+        <span class="logo-mark">C</span>Centrix Plus
+      </div>
+      <div class="doc-meta">
+        <strong>Software Development Agreement</strong><br/>
+        Ref: CXP-DCT-2026-001 &nbsp;·&nbsp; v1.0<br/>
+        Effective Date: 26 April 2026
+      </div>
+    </div>
+
+    <span class="cover-tag">Odoo V19 · Consignment Marketplace ERP</span>
+    <h1 class="display">An API-Driven<br/>Consignment Marketplace.</h1>
+    <p class="cover-sub">A 12-week implementation that turns DealatCity into a true consignment marketplace — vendors push products &amp; stock via API into Odoo, see what sells in real time, and raise an invoice for sold items. <strong style="color:#fff;">450 KD / month × 12</strong> &nbsp;·&nbsp; Year-1 total <strong style="color:#fcd34d;">5,400 KD</strong>.</p>
+
+    <div class="parties">
+      <div class="party">
+        <h4>Prepared For</h4>
+        <div class="name">DealatCity Gen. Trading Co.</div>
+        <div class="role">www.dealatcity.com · Kuwait</div>
+      </div>
+      <div class="between">×</div>
+      <div class="party" style="text-align:right;">
+        <h4>Delivered By</h4>
+        <div class="name">Centrix Plus Integrated Solution Co.</div>
+        <div class="role">Odoo Implementation Partner · Kuwait</div>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="num">12<small> wks</small></div>
+        <div class="label">Implementation</div>
+      </div>
+      <div class="stat">
+        <div class="num">450<small> KD/mo</small></div>
+        <div class="label">12-Month Plan</div>
+      </div>
+      <div class="stat">
+        <div class="num">5,400<small> KD</small></div>
+        <div class="label">Total Contract</div>
+      </div>
+      <div class="stat">
+        <div class="num">V19</div>
+        <div class="label">Odoo Edition</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECT INFO ===================== -->
+  <section>
+    <div class="section-header">
+      <span class="eyebrow">01 — Project Information</span>
+      <h2 class="section-title">Engagement Snapshot</h2>
+      <p class="lead">Key parameters of this engagement, agreed between Centrix Plus and DealatCity prior to kickoff.</p>
+    </div>
+
+    <table class="info">
+      <tr><th>Agreement Reference</th><td>CXP-DCT-2026-001</td></tr>
+      <tr><th>Project Name</th><td>DealatCity — Odoo V19 Consignment Marketplace ERP</td></tr>
+      <tr><th>Client (the "Client")</th><td>DealatCity Gen. Trading Co.</td></tr>
+      <tr><th>Developer (the "Developer")</th><td>Centrix Plus Integrated Solution Co.</td></tr>
+      <tr><th>Client Point of Contact</th><td>Maimoon · +965 9726 5258</td></tr>
+      <tr><th>Project Location</th><td>State of Kuwait</td></tr>
+      <tr><th>Website</th><td>www.dealatcity.com</td></tr>
+      <tr><th>ERP Platform</th><td>Odoo Version 19 (Enterprise)</td></tr>
+      <tr><th>Implementation Duration</th><td>12 Weeks (~ 3 Months) from Effective Date</td></tr>
+      <tr><th>Engagement Model</th><td>Subscription-based — 12 monthly installments</td></tr>
+      <tr><th>Total Contract Value</th><td>5,400 KD (450 KD × 12 months)</td></tr>
+      <tr><th>Effective Date</th><td>26 April 2026</td></tr>
+      <tr><th>Governing Law</th><td>Laws of the State of Kuwait</td></tr>
+    </table>
+
+    <h3 style="margin-top:24px;">Recitals</h3>
+    <div style="background:var(--bg-soft); border:1px solid var(--line); border-radius:10px; padding:18px 22px; font-size:9.5pt; color:var(--ink-3); line-height:1.65;">
+      <p style="margin-bottom:8px;"><strong style="color:var(--ink);">WHEREAS</strong> the Client is engaged in operating an online marketplace at www.dealatcity.com and requires a unified ERP and consignment-marketplace platform;</p>
+      <p style="margin-bottom:8px;"><strong style="color:var(--ink);">WHEREAS</strong> the Developer is a Kuwait-based Odoo implementation specialist with the technical expertise and team capacity to deliver such platform;</p>
+      <p style="margin-bottom:8px;"><strong style="color:var(--ink);">WHEREAS</strong> both parties have negotiated and agreed upon the scope, timeline, commercials, and terms set out in this Agreement;</p>
+      <p style="margin:0;"><strong style="color:var(--ink);">NOW, THEREFORE,</strong> in consideration of the mutual covenants and obligations herein, the parties agree as follows:</p>
+    </div>
+  </section>
+
+  <!-- ===================== EXECUTIVE SUMMARY ===================== -->
+  <section style="background: var(--bg-soft);">
+    <div class="section-header">
+      <span class="eyebrow">02 — Executive Summary</span>
+      <h2 class="section-title">What We Are Building</h2>
+    </div>
+
+    <div class="exec-grid">
+      <div>
+        <p class="lead">DealatCity is becoming a <strong>consignment marketplace</strong> on Odoo V19. Vendors connect their own systems via API and push products and stock directly into a central Odoo catalog. They get a personal portal page that shows their on-consignment stock, what has sold, and the value of those sales — so they can raise an invoice to DealatCity for sold items only. Both parties share the same source of truth.</p>
+
+        <p>Delivered in 12 weeks, milestone-based, by a Kuwait-based team with hands-on Odoo experience. Knowledge transfer is built in so DealatCity owns the platform, not just the deliverable.</p>
+      </div>
+
+      <ul class="pillar-list">
+        <li><strong>Vendor API &amp; Portal</strong>Login, API push of products &amp; stock, vendor visibility page.</li>
+        <li><strong>Consignment Sales</strong>Sold-item tracking, vendor invoice workflow, settlements.</li>
+        <li><strong>Inventory &amp; Warehouse</strong>SKU, barcode, variants, valuation, multi-location.</li>
+        <li><strong>Full Accounting Cycle</strong>AP/AR, GL, assets, financial reporting.</li>
+        <li><strong>Website &amp; API Sync</strong>Real-time orders, products, customers.</li>
+      </ul>
+    </div>
+
+    <div class="callout">
+      <strong>End-to-End Flow:</strong> Vendor pushes products &amp; stock via API → stock lands in Odoo as consignment → admin approves &amp; publishes to dealatcity.com → customer orders → both vendor and DealatCity see what was sold and at what value → vendor raises an invoice for sold items → DealatCity records the bill and settles per agreed terms.
+    </div>
+  </section>
+
+  <!-- ===================== METHODOLOGY ===================== -->
+  <section>
+    <div class="section-header">
+      <span class="eyebrow">03 — Methodology</span>
+      <h2 class="section-title">Five-Step Delivery Approach</h2>
+      <p class="lead">A proven implementation framework that compresses risk into the early phases and accelerates time-to-value.</p>
+    </div>
+
+    <div class="method">
+      <div class="method-step">
+        <div class="num">1</div>
+        <h4>Discover</h4>
+        <p>Workshops, master-data audit, gap analysis.</p>
+      </div>
+      <div class="method-step">
+        <div class="num">2</div>
+        <h4>Configure</h4>
+        <p>Odoo setup, modules, multi-company, COA.</p>
+      </div>
+      <div class="method-step">
+        <div class="num">3</div>
+        <h4>Integrate</h4>
+        <p>Website API, real-time sync, error handling.</p>
+      </div>
+      <div class="method-step">
+        <div class="num">4</div>
+        <h4>Validate</h4>
+        <p>UAT, training, parallel runs, sign-off.</p>
+      </div>
+      <div class="method-step">
+        <div class="num">5</div>
+        <h4>Launch</h4>
+        <p>Cut-over, go-live, hyper-care, handover.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SCOPE OF WORK ===================== -->
+  <section class="page-break-before" style="background: var(--bg-soft);">
+    <div class="section-header">
+      <span class="eyebrow">04 — Scope of Work</span>
+      <h2 class="section-title">Detailed Functional Scope</h2>
+      <p class="lead">Each pillar below is delivered with workshops, configuration, validation, and documented handover.</p>
+    </div>
+
+    <!-- 4.1 INVENTORY -->
+    <div class="scope-card">
+      <div class="scope-card-head">
+        <div class="scope-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <div class="title-block">
+          <div class="index">PILLAR 4.1</div>
+          <h3>Inventory & Warehouse Management</h3>
+          <p style="margin:4px 0 0 0; font-size:9.5pt; color:var(--muted);">A single source of truth for stock — across SKUs, variants, barcodes, and locations.</p>
+        </div>
+      </div>
+
+      <div class="scope-body">
+        <div>
+          <h4>Configuration</h4>
+          <ul>
+            <li>Storage locations, bins, and warehouse hierarchy per store</li>
+            <li>Replenishment rules and minimum/maximum stock levels</li>
+            <li>FIFO / LIFO / Average Cost valuation as per business rule</li>
+            <li>Damaged, expired, and return adjustment workflows</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Identification & Tracking</h4>
+          <ul>
+            <li>SKU strategy and classification scheme</li>
+            <li>Barcode generation, label printing, scan-based operations</li>
+            <li>Product variants (size, color, model) with auto stock updates</li>
+            <li>Inter-warehouse and inter-store stock movements</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modules-tag">
+        <span class="tag">Inventory</span>
+        <span class="tag">Purchase</span>
+        <span class="tag">Barcode</span>
+      </div>
+
+      <div class="deliverable-line"><strong>Deliverable</strong>Configured inventory module with master data loaded, barcoded, and operationally ready.</div>
+    </div>
+
+    <!-- 4.2 MULTI-STORE -->
+    <div class="scope-card">
+      <div class="scope-card-head">
+        <div class="scope-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2h-3v-7H8v7H5a2 2 0 0 1-2-2z"/></svg>
+        </div>
+        <div class="title-block">
+          <div class="index">PILLAR 4.2</div>
+          <h3>Multi-Company & Multi-Store Operations</h3>
+          <p style="margin:4px 0 0 0; font-size:9.5pt; color:var(--muted);">Independent operations, consolidated visibility — every store has its own P&amp;L.</p>
+        </div>
+      </div>
+
+      <div class="scope-body">
+        <div>
+          <h4>Operations per Store</h4>
+          <ul>
+            <li>Independent sales, purchases, and expense ledgers</li>
+            <li>Store-level operational expenses and overhead allocation</li>
+            <li>Approval workflows for purchases and expense categories</li>
+            <li>Visibility into store-level profitability metrics</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Group Visibility</h4>
+          <ul>
+            <li>Inter-company transactions and reconciliations</li>
+            <li>Consolidated financial statements across entities</li>
+            <li>Customizable per-company dashboards</li>
+            <li>Role-based access control by entity</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modules-tag">
+        <span class="tag">Multi-Company</span>
+        <span class="tag">Sales</span>
+        <span class="tag">CRM</span>
+        <span class="tag">POS</span>
+      </div>
+
+      <div class="deliverable-line"><strong>Deliverable</strong>Multi-store structure with independent ledgers and group-level reporting live in test environment.</div>
+    </div>
+
+    <!-- 4.3 ACCOUNTING -->
+    <div class="scope-card">
+      <div class="scope-card-head">
+        <div class="scope-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div class="title-block">
+          <div class="index">PILLAR 4.3</div>
+          <h3>Full Accounting Cycle & Financial Reporting</h3>
+          <p style="margin:4px 0 0 0; font-size:9.5pt; color:var(--muted);">Books that close themselves — automated, auditable, ready for VAT readiness.</p>
+        </div>
+      </div>
+
+      <div class="scope-body">
+        <div>
+          <h4>Core Accounting</h4>
+          <ul>
+            <li>Chart of Accounts aligned with Kuwait business practices</li>
+            <li>Accounts Payable / Receivable workflows</li>
+            <li>General Ledger and journal entry automation</li>
+            <li>Fixed-asset register and depreciation schedules</li>
+            <li>Bank reconciliation and cash management</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Reporting & Compliance</h4>
+          <ul>
+            <li>Profit &amp; Loss statements (consolidated & per entity)</li>
+            <li>Balance Sheet and Cash Flow reports</li>
+            <li>Aged receivables and payables analysis</li>
+            <li>Configurable for future VAT and e-invoicing requirements</li>
+            <li>Audit trail for every financial transaction</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modules-tag">
+        <span class="tag">Accounting</span>
+        <span class="tag">Invoicing</span>
+        <span class="tag">Assets</span>
+        <span class="tag">Reporting</span>
+      </div>
+
+      <div class="deliverable-line"><strong>Deliverable</strong>Complete accounting cycle configured, opening balances loaded, and standard reports validated.</div>
+    </div>
+
+    <!-- 4.4 INTEGRATION -->
+    <div class="scope-card">
+      <div class="scope-card-head">
+        <div class="scope-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        </div>
+        <div class="title-block">
+          <div class="index">PILLAR 4.4</div>
+          <h3>Website Integration & Real-Time Synchronization</h3>
+          <p style="margin:4px 0 0 0; font-size:9.5pt; color:var(--muted);">Bidirectional sync between Odoo and dealatcity.com — orders, products, and customers in lock-step.</p>
+        </div>
+      </div>
+
+      <div class="scope-body">
+        <div>
+          <h4>Integration</h4>
+          <ul>
+            <li>REST API connection between Odoo and the DealatCity website</li>
+            <li>Product catalog push: SKU, variants, pricing, stock levels</li>
+            <li>Order pull: customer, line items, payment, fulfillment status</li>
+            <li>Customer master sync (registration, profile, history)</li>
+            <li>Webhook endpoints for instant event-driven updates</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Reliability</h4>
+          <ul>
+            <li>Retry logic and exponential back-off on failures</li>
+            <li>Error logging, alerts, and dead-letter queue handling</li>
+            <li>Sync monitoring dashboard with status indicators</li>
+            <li>Idempotency to prevent duplicate orders or stock corruption</li>
+            <li>Scheduled reconciliation jobs for end-of-day integrity</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modules-tag">
+        <span class="tag">REST API</span>
+        <span class="tag">Webhooks</span>
+        <span class="tag">eCommerce</span>
+        <span class="tag">Monitoring</span>
+      </div>
+
+      <div class="deliverable-line"><strong>Deliverable</strong>End-to-end live order flow validated with monitoring and reconciliation in place.</div>
+    </div>
+
+    <!-- 4.5 TRAINING -->
+    <div class="scope-card">
+      <div class="scope-card-head">
+        <div class="scope-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <div class="title-block">
+          <div class="index">PILLAR 4.5</div>
+          <h3>Training, Documentation & Handover</h3>
+          <p style="margin:4px 0 0 0; font-size:9.5pt; color:var(--muted);">Build capability into the team, not dependency on the vendor.</p>
+        </div>
+      </div>
+
+      <div class="scope-body">
+        <div>
+          <h4>Training Program</h4>
+          <ul>
+            <li>Admin track — system configuration, user management, security</li>
+            <li>Finance track — journals, reconciliations, financial reports</li>
+            <li>Operations track — inventory, purchase, sales, POS</li>
+            <li>Train-the-trainer sessions for internal champions</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Documentation</h4>
+          <ul>
+            <li>SOP playbooks per business workflow</li>
+            <li>Configuration document and recovery runbook</li>
+            <li>API specification and integration guide</li>
+            <li>60-day post-go-live hyper-care support</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modules-tag">
+        <span class="tag">Training</span>
+        <span class="tag">Documentation</span>
+        <span class="tag">Hyper-care</span>
+      </div>
+
+      <div class="deliverable-line"><strong>Deliverable</strong>Trained user base, documented procedures, and warm handover to internal team.</div>
+    </div>
+  </section>
+
+  <!-- ===================== MARKETPLACE VENDOR OPERATIONS ===================== -->
+  <section class="page-break-before">
+    <div class="section-header">
+      <span class="eyebrow">05 — Marketplace Vendor Operations</span>
+      <h2 class="section-title">Consignment Marketplace · API-Driven</h2>
+      <p class="lead">Vendors push products and stock from their own systems into Odoo via API. Their portal page shows live consignment stock and items sold. When something sells, both parties see it — and the vendor raises an invoice for the value of sold goods.</p>
+    </div>
+
+    <!-- VENDOR FLOW DIAGRAM -->
+    <div class="flow-diagram">
+      <div class="flow-node">
+        <div class="flow-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="flow-label">Vendor logs into portal</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">
+        <div class="flow-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <div class="flow-label">Vendor system → Odoo (API push)</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">
+        <div class="flow-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div class="flow-label">Live on dealatcity.com</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">
+        <div class="flow-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11H1l8-8 8 8h-8v10z" transform="rotate(180 12 12)"/></svg>
+        </div>
+        <div class="flow-label">Customer orders · both parties see sale</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node primary">
+        <div class="flow-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <div class="flow-label"><strong>Vendor invoices DealatCity for sold items</strong></div>
+      </div>
+    </div>
+
+    <!-- TECHNICAL ARCHITECTURE DIAGRAM -->
+    <h3 style="margin-top:30px;">Technical Architecture</h3>
+    <p style="font-size:10pt; color:var(--ink-3); margin-bottom:14px;">A high-level view of how vendor systems, Odoo, and the DealatCity website connect — and how data flows between them.</p>
+
+    <div class="arch-diagram">
+      <!-- COL 1: VENDOR SIDE -->
+      <div class="arch-col">
+        <div class="arch-tier-label vendor">Vendor Side</div>
+        <div class="arch-box">
+          <div class="arch-box-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="arch-box-text">
+            <strong>Vendor System / ERP</strong>
+            <span>Vendor's own platform</span>
+          </div>
+        </div>
+        <div class="arch-box">
+          <div class="arch-box-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+          </div>
+          <div class="arch-box-text">
+            <strong>Vendor Portal Login</strong>
+            <span>Web-based access to Odoo</span>
+          </div>
+        </div>
+        <div class="arch-box">
+          <div class="arch-box-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="arch-box-text">
+            <strong>Visibility Page</strong>
+            <span>Stock · Sold items · Invoice</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- COL 2: FLOWS LEFT -->
+      <div class="arch-flows">
+        <div class="arch-flow flow-right">
+          <span class="flow-arrow-line"></span>
+          <span class="flow-arrow-tip">▶</span>
+          <div class="arch-flow-label">Products + Stock<br/>(REST API)</div>
+        </div>
+        <div class="arch-flow flow-left">
+          <span class="flow-arrow-line"></span>
+          <span class="flow-arrow-tip flow-arrow-tip-left">◀</span>
+          <div class="arch-flow-label">Sold-Item Data<br/>(read-only)</div>
+        </div>
+        <div class="arch-flow flow-right">
+          <span class="flow-arrow-line"></span>
+          <span class="flow-arrow-tip">▶</span>
+          <div class="arch-flow-label">Vendor Invoice<br/>(submit)</div>
+        </div>
+      </div>
+
+      <!-- COL 3: ODOO PLATFORM (CENTER) -->
+      <div class="arch-col arch-center">
+        <div class="arch-tier-label odoo">Odoo V19 Platform · DealatCity</div>
+        <div class="arch-box accent">
+          <div class="arch-box-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="arch-box-text">
+            <strong>REST API Gateway</strong>
+            <span>Token auth · rate limit · webhooks</span>
+          </div>
+        </div>
+        <div class="arch-box">
+          <div class="arch-box-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <div class="arch-box-text">
+            <strong>Central Catalog</strong>
+            <span>Master products · variants · media</span>
+          </div>
+        </div>
+        <div class="arch-box">
+          <div class="arch-box-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <div class="arch-box-text">
+            <strong>Consignment Stock</strong>
+            <span>Vendor-owned · per-SKU tracking</span>
+          </div>
+        </div>
+        <div class="arch-box">
+          <div class="arch-box-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div class="arch-box-text">
+            <strong>Sold-Item Ledger</strong>
+            <span>Source of truth · shared view</span>
+          </div>
+        </div>
+        <div class="arch-box accent">
+          <div class="arch-box-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="arch-box-text">
+            <strong>Accounting · Vendor Bills</strong>
+            <span>Settlement · payouts</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- COL 4: FLOWS RIGHT -->
+      <div class="arch-flows">
+        <div class="arch-flow flow-right">
+          <span class="flow-arrow-line"></span>
+          <span class="flow-arrow-tip">▶</span>
+          <div class="arch-flow-label">Catalog Publish<br/>(real-time API)</div>
+        </div>
+        <div class="arch-flow flow-left">
+          <span class="flow-arrow-line"></span>
+          <span class="flow-arrow-tip flow-arrow-tip-left">◀</span>
+          <div class="arch-flow-label">Customer Orders<br/>+ Payments</div>
+        </div>
+      </div>
+
+      <!-- COL 5: CUSTOMER SIDE -->
+      <div class="arch-col">
+        <div class="arch-tier-label customer">Customer Side</div>
+        <div class="arch-box">
+          <div class="arch-box-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="arch-box-text">
+            <strong>dealatcity.com</strong>
+            <span>Storefront &amp; checkout</span>
+          </div>
+        </div>
+        <div class="arch-box">
+          <div class="arch-box-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="arch-box-text">
+            <strong>End Customer</strong>
+            <span>Browse · order · pay</span>
+          </div>
+        </div>
+        <div class="arch-box">
+          <div class="arch-box-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="arch-box-text">
+            <strong>Order Confirmation</strong>
+            <span>Webhook back to Odoo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arch-legend">
+      <div class="arch-legend-item"><span class="dot dot-blue"></span> Odoo platform component</div>
+      <div class="arch-legend-item"><span class="dot dot-gold"></span> API gateway / accounting boundary</div>
+      <div class="arch-legend-item"><span class="dot dot-arrow">▶</span> Data flow direction</div>
+    </div>
+
+    <!-- 5.1 VENDOR ONBOARDING & PORTAL LOGIN -->
+    <div class="scope-card">
+      <div class="scope-card-head">
+        <div class="scope-icon vendor-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+        </div>
+        <div class="title-block">
+          <div class="index">PILLAR 5.1</div>
+          <h3>Vendor Onboarding &amp; Portal Login</h3>
+          <p style="margin:4px 0 0 0; font-size:9.5pt; color:var(--muted);">Each vendor gets a secure login, an API key, and a dedicated portal page in Odoo to track their consignment business with DealatCity.</p>
+        </div>
+      </div>
+
+      <div class="scope-body">
+        <div>
+          <h4>Onboarding</h4>
+          <ul>
+            <li>Vendor record creation with company &amp; contact details</li>
+            <li>KYC capture (CR, license, IBAN, ID) with document storage</li>
+            <li>Admin approval workflow before activation</li>
+            <li>Consignment agreement acceptance &amp; e-record</li>
+            <li>Auto-issue of portal credentials &amp; API key on activation</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Portal Access</h4>
+          <ul>
+            <li>Secure vendor login with role-based access</li>
+            <li>Per-vendor API key &amp; secret for system-to-system push</li>
+            <li>Profile management — logo, banner, description, categories</li>
+            <li>Vendor status (active / suspended / blocked) by admin</li>
+            <li>Audit log of every login and API call from vendor</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modules-tag">
+        <span class="tag">Odoo Portal</span>
+        <span class="tag">Vendor Auth</span>
+        <span class="tag">API Keys</span>
+        <span class="tag">Document Mgmt</span>
+      </div>
+
+      <div class="deliverable-line"><strong>Deliverable</strong>Vendors can log into Odoo, see their personal portal page, and obtain API credentials for system integration.</div>
+    </div>
+
+    <!-- 5.2 VENDOR API & CATALOG -->
+    <div class="scope-card">
+      <div class="scope-card-head">
+        <div class="scope-icon vendor-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <div class="title-block">
+          <div class="index">PILLAR 5.2</div>
+          <h3>Vendor API Integration &amp; Central Catalog</h3>
+          <p style="margin:4px 0 0 0; font-size:9.5pt; color:var(--muted);">Vendors push products and stock from their own systems into Odoo via a secure REST API. No manual upload — pure system-to-system integration.</p>
+        </div>
+      </div>
+
+      <div class="scope-body">
+        <div>
+          <h4>Vendor → Odoo API</h4>
+          <ul>
+            <li>REST API endpoints for product create / update / delete</li>
+            <li>Stock-level push API (qty on hand, reserved, available)</li>
+            <li>Image &amp; media upload endpoints with CDN caching</li>
+            <li>Pricing &amp; consignment-cost push from vendor's system</li>
+            <li>Token-based auth, rate limiting, request signing</li>
+            <li>Webhook callbacks to vendor system on order &amp; stock events</li>
+            <li>Documented API spec (OpenAPI) for vendor IT teams</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Central Catalog &amp; Publishing</h4>
+          <ul>
+            <li>Single source of truth — every vendor product in one Odoo catalog</li>
+            <li>Category taxonomy mapping &amp; enforcement</li>
+            <li>SKU, barcode, weight, dimension, variants, attributes</li>
+            <li>Admin moderation queue (approve / reject / change-request)</li>
+            <li>Auto-publish to dealatcity.com on approval</li>
+            <li>Real-time stock sync vendor → Odoo → website</li>
+            <li>Audit log of every API call &amp; product change</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modules-tag">
+        <span class="tag">REST API</span>
+        <span class="tag">Webhooks</span>
+        <span class="tag">OpenAPI Spec</span>
+        <span class="tag">Product Master</span>
+        <span class="tag">Moderation</span>
+      </div>
+
+      <div class="deliverable-line"><strong>Deliverable</strong>Documented vendor API live; sample integration tested; approved products flowing to dealatcity.com automatically.</div>
+    </div>
+
+    <!-- 5.3 PRICING / DISCOUNT / OFFERS -->
+    <div class="scope-card">
+      <div class="scope-card-head">
+        <div class="scope-icon vendor-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+        </div>
+        <div class="title-block">
+          <div class="index">PILLAR 5.3</div>
+          <h3>Pricing, Discounts &amp; Offer Management</h3>
+          <p style="margin:4px 0 0 0; font-size:9.5pt; color:var(--muted);">Vendor cost, marketplace markup, customer-facing price, and promotions — controlled at the right layer.</p>
+        </div>
+      </div>
+
+      <div class="scope-body">
+        <div>
+          <h4>Pricing Engine</h4>
+          <ul>
+            <li>Vendor cost price (private to vendor &amp; admin)</li>
+            <li>Marketplace markup rules — % per category, vendor, or product</li>
+            <li>Auto-calculated selling price with override option</li>
+            <li>Multi-tier pricing (retail / wholesale / member)</li>
+            <li>Currency support &amp; tax-inclusive / exclusive logic</li>
+            <li>Price-change approval workflow with audit trail</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Promotions &amp; Offers</h4>
+          <ul>
+            <li>Flat / percentage discounts at product, category, or vendor level</li>
+            <li>Coupon codes with usage limits and customer rules</li>
+            <li>Bundle &amp; cross-sell offers ("buy 2 get 1")</li>
+            <li>Time-bound campaigns (start / end with auto-revert)</li>
+            <li>Vendor-funded vs marketplace-funded discount flagging</li>
+            <li>Customer-segment targeting (new / returning / VIP)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modules-tag">
+        <span class="tag">Pricelist Engine</span>
+        <span class="tag">Promotions</span>
+        <span class="tag">Coupons</span>
+        <span class="tag">Approval Workflow</span>
+      </div>
+
+      <div class="deliverable-line"><strong>Deliverable</strong>Configurable pricing &amp; promotions engine running across catalog, cart, and checkout.</div>
+    </div>
+
+    <!-- 5.4 CONSIGNMENT SALES & VENDOR INVOICE -->
+    <div class="scope-card">
+      <div class="scope-card-head">
+        <div class="scope-icon vendor-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+        </div>
+        <div class="title-block">
+          <div class="index">PILLAR 5.4</div>
+          <h3>Consignment Sales, Vendor Visibility &amp; Invoicing</h3>
+          <p style="margin:4px 0 0 0; font-size:9.5pt; color:var(--muted);">Sale-or-return / consignment model. Stock stays on the vendor's books until DealatCity sells it. Vendor invoices DealatCity only for what was sold.</p>
+        </div>
+      </div>
+
+      <div class="scope-body">
+        <div>
+          <h4>Vendor Visibility Page (Odoo Portal)</h4>
+          <ul>
+            <li>Live view of vendor's products listed in DealatCity</li>
+            <li>Current consignment stock by SKU and location</li>
+            <li>Sold-items report: date, qty, customer (anonymised), value</li>
+            <li>Outstanding amount available to invoice</li>
+            <li>Returns &amp; cancellations affecting consignment stock</li>
+            <li>Filter by date, product, store, status</li>
+            <li>Export to PDF / Excel for vendor's own records</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Consignment Accounting &amp; Invoicing</h4>
+          <ul>
+            <li>Stock recorded in consignment location — vendor retains ownership</li>
+            <li>No vendor bill on stock receipt (consignment ≠ purchase)</li>
+            <li>On customer sale: COGS posted at agreed consignment cost</li>
+            <li>Sold-item ledger updated for both vendor and DealatCity</li>
+            <li>Vendor raises invoice from portal (or uploads their own) for sold items</li>
+            <li>DealatCity admin validates against actual sales &amp; records vendor bill</li>
+            <li>Settlement per agreed cycle (weekly / monthly) with payment-run export</li>
+            <li>Dispute / reconciliation workflow for mismatched lines</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modules-tag">
+        <span class="tag">Consignment Stock</span>
+        <span class="tag">Sold-Item Ledger</span>
+        <span class="tag">Vendor Invoice</span>
+        <span class="tag">Vendor Bill</span>
+        <span class="tag">Settlement</span>
+      </div>
+
+      <div class="deliverable-line"><strong>Deliverable</strong>Consignment accounting live, vendor portal page showing stock &amp; sold items, vendor-raised invoice workflow operational.</div>
+    </div>
+
+    <div class="callout">
+      <strong>Why consignment matters:</strong> DealatCity carries no inventory risk — vendors retain ownership until a customer buys. The vendor only invoices for what actually sells, so cashflow stays clean for both sides. The shared visibility (same data, both parties) eliminates "what did I sell, how much do you owe me" disputes that kill marketplace relationships.
+    </div>
+  </section>
+
+  <!-- ===================== TIMELINE ===================== -->
+  <section class="page-break-before">
+    <div class="section-header">
+      <span class="eyebrow">06 — Project Timeline</span>
+      <h2 class="section-title">12-Week Delivery Plan</h2>
+      <p class="lead">Multiple phases run in parallel to compress the schedule. Each milestone has a clearly defined acceptance criterion before the next phase opens. The marketplace vendor module runs alongside the core ERP build to maximise efficiency.</p>
+    </div>
+
+    <div class="gantt">
+      <div class="gantt-header">
+        <div>Phase &amp; Activity</div>
+        <div>Schedule (Week 1 → Week 12)</div>
+        <div style="text-align:right;">Milestone</div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="phase-name">
+          <strong>Phase 1 · Discovery</strong>
+          <span>Requirements, vendor model, master data, kickoff</span>
+        </div>
+        <div class="bar-cell">
+          <div class="bar-track"><div class="bar" style="left:0%; width:8.33%;">W1</div></div>
+        </div>
+        <div class="milestone">Kickoff sign-off</div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="phase-name">
+          <strong>Phase 2 · Core ERP Setup</strong>
+          <span>Multi-company, inventory, accounting base</span>
+        </div>
+        <div class="bar-cell">
+          <div class="bar-track"><div class="bar" style="left:8.33%; width:25%;">W2 – W4</div></div>
+        </div>
+        <div class="milestone">Core ERP in test</div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="phase-name">
+          <strong>Phase 3 · Vendor Portal &amp; Catalog</strong>
+          <span>Vendor onboarding, product upload, moderation</span>
+        </div>
+        <div class="bar-cell">
+          <div class="bar-track"><div class="bar" style="left:16.67%; width:33.33%;">W3 – W6</div></div>
+        </div>
+        <div class="milestone">Vendor portal live (test)</div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="phase-name">
+          <strong>Phase 4 · Pricing &amp; Auto-Billing</strong>
+          <span>Markup engine, discounts, vendor bill automation</span>
+        </div>
+        <div class="bar-cell">
+          <div class="bar-track"><div class="bar" style="left:33.33%; width:33.33%;">W5 – W8</div></div>
+        </div>
+        <div class="milestone">Auto-bill validated</div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="phase-name">
+          <strong>Phase 5 · Website Integration</strong>
+          <span>Real-time API sync, order capture, monitoring</span>
+        </div>
+        <div class="bar-cell">
+          <div class="bar-track"><div class="bar" style="left:50%; width:25%;">W7 – W9</div></div>
+        </div>
+        <div class="milestone">End-to-end flow live</div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="phase-name">
+          <strong>Phase 6 · Accounting &amp; Reports</strong>
+          <span>Final COA, settlements, financial reporting</span>
+        </div>
+        <div class="bar-cell">
+          <div class="bar-track"><div class="bar" style="left:66.67%; width:16.67%;">W9 – W10</div></div>
+        </div>
+        <div class="milestone">Books finalised</div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="phase-name">
+          <strong>Phase 7 · UAT &amp; Training</strong>
+          <span>User acceptance testing, vendor &amp; staff training</span>
+        </div>
+        <div class="bar-cell">
+          <div class="bar-track"><div class="bar gold" style="left:83.33%; width:8.33%;">W11</div></div>
+        </div>
+        <div class="milestone">UAT sign-off</div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="phase-name">
+          <strong>Phase 8 · Go-Live</strong>
+          <span>Cut-over, hyper-care, handover</span>
+        </div>
+        <div class="bar-cell">
+          <div class="bar-track"><div class="bar green" style="left:91.67%; width:8.33%;">W12</div></div>
+        </div>
+        <div class="milestone">
+          Production live
+          <br/><span class="pill green">Go-Live</span>
+        </div>
+      </div>
+
+      <div style="padding: 6px 14px 12px 214px;">
+        <div class="week-axis week-axis-12">
+          <div>W1</div><div>W2</div><div>W3</div><div>W4</div><div>W5</div><div>W6</div><div>W7</div><div>W8</div><div>W9</div><div>W10</div><div>W11</div><div>W12</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INVESTMENT ===================== -->
+  <section class="page-break-before" style="background: var(--bg-soft);">
+    <div class="section-header">
+      <span class="eyebrow">07 — Investment</span>
+      <h2 class="section-title">12-Month Payment Plan</h2>
+      <p class="lead">A predictable monthly cost replaces the traditional upfront lump-sum. The full implementation and Year-1 support are covered by twelve equal monthly installments.</p>
+    </div>
+
+    <!-- Single hero: 12-month plan -->
+    <div class="price-hero">
+      <div>
+        <div class="label">Total Contract · 12-Month Plan</div>
+        <h3>Odoo V19 Consignment Marketplace ERP</h3>
+        <p>Includes everything in Sections 04 and 05: Core ERP · Vendor API &amp; Portal · Consignment Sales · Auto-Bill Workflow · Website API · Training · Full Year-1 vendor support.</p>
+      </div>
+      <div class="amount">
+        <div class="big">450<small>KD/mo</small></div>
+        <div class="sub">× 12 months &nbsp;·&nbsp; Total contract value <strong style="color:#fff;">5,400 KD</strong></div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:28px;">Year 1 · 12-Month Installment Schedule</h3>
+    <div class="install-strip">
+      <div class="install-cell first">
+        <div class="m">M1</div>
+        <div class="kd">450 KD</div>
+        <div class="trig">Kickoff</div>
+      </div>
+      <div class="install-cell"><div class="m">M2</div><div class="kd">450 KD</div></div>
+      <div class="install-cell"><div class="m">M3</div><div class="kd">450 KD</div></div>
+      <div class="install-cell go-live">
+        <div class="m">M3 · End</div>
+        <div class="kd">Go-Live</div>
+        <div class="trig">~ Week 12</div>
+      </div>
+      <div class="install-cell"><div class="m">M4</div><div class="kd">450 KD</div></div>
+      <div class="install-cell"><div class="m">M5</div><div class="kd">450 KD</div></div>
+      <div class="install-cell"><div class="m">M6</div><div class="kd">450 KD</div></div>
+      <div class="install-cell"><div class="m">M7</div><div class="kd">450 KD</div></div>
+      <div class="install-cell"><div class="m">M8</div><div class="kd">450 KD</div></div>
+      <div class="install-cell"><div class="m">M9</div><div class="kd">450 KD</div></div>
+      <div class="install-cell"><div class="m">M10</div><div class="kd">450 KD</div></div>
+      <div class="install-cell"><div class="m">M11</div><div class="kd">450 KD</div></div>
+      <div class="install-cell last"><div class="m">M12</div><div class="kd">450 KD</div><div class="trig">Year 1 ends</div></div>
+    </div>
+    <div class="callout" style="margin-top:14px;">
+      <strong>How the months are structured:</strong> Months 1–3 cover the active 12-week implementation including the marketplace vendor module. Months 4–12 cover post-go-live support, bug fixes, and minor enhancements at no additional cost — all included within the 450 KD monthly fee.
+    </div>
+
+    <h3 style="margin-top:28px;">Contract Summary</h3>
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Period</th>
+          <th>Coverage</th>
+          <th class="amt">Monthly</th>
+          <th class="amt">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Months 1 – 12</strong></td>
+          <td>Implementation + Year-1 vendor support</td>
+          <td class="amt">450 KD</td>
+          <td class="amt">5,400 KD</td>
+        </tr>
+        <tr class="total-row">
+          <td colspan="3">Total Contract Value</td>
+          <td class="amt">5,400 KD</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top:28px;">Recurring Costs · Client Responsibility</h3>
+    <table class="price-table">
+      <thead>
+        <tr><th>Item</th><th>Description</th><th class="amt">Cost</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Odoo Enterprise License</strong></td>
+          <td>Per-user subscription (10-user minimum recommended)</td>
+          <td class="amt">USD 20.5 / user / month</td>
+        </tr>
+        <tr>
+          <td><strong>WhatsApp Business API</strong></td>
+          <td>One-time setup + pay-as-you-go conversation fees</td>
+          <td class="amt">USD 400 (setup) + usage</td>
+        </tr>
+        <tr>
+          <td><strong>Server Hosting</strong></td>
+          <td>Optional managed hosting (alternative: client-provided server)</td>
+          <td class="amt">USD 150 – 200 / month</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ===================== ADD-ONS ===================== -->
+  <section>
+    <div class="section-header">
+      <span class="eyebrow">08 — Optional Add-Ons</span>
+      <h2 class="section-title">Phase 2 Modules</h2>
+      <p class="lead">Optional modules — quoted separately and triggered only when the core platform is stable and the business is ready.</p>
+    </div>
+
+    <div class="addon-grid">
+      <div class="addon-card">
+        <div class="label">Annex A</div>
+        <h3>Contact Center</h3>
+        <p>Inbound call handling, Odoo-integrated customer context, and WhatsApp conversations from a single agent screen.</p>
+        <div class="price-line">10 KD / agent / month <span style="font-weight:500; color:var(--muted); font-size:9pt;">· min 5 agents</span></div>
+      </div>
+
+      <div class="addon-card">
+        <div class="label">Annex B</div>
+        <h3>Fulfillment Center</h3>
+        <p>Warehouse zones, driver profiles, mobile driver app, payment-link generation, digital signatures, delivery reconciliation.</p>
+        <div class="price-line">Quoted separately <span style="font-weight:500; color:var(--muted); font-size:9pt;">· Phase 2</span></div>
+      </div>
+
+      <div class="addon-card">
+        <div class="label">Annex C</div>
+        <h3>Customer Loyalty &amp; Wallet</h3>
+        <p>Points engine, customer wallet, tier-based rewards, referral tracking, and gift-card management integrated with checkout.</p>
+        <div class="price-line">Quoted separately <span style="font-weight:500; color:var(--muted); font-size:9pt;">· Phase 2</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INC / EXC ===================== -->
+  <section style="background: var(--bg-soft);">
+    <div class="section-header">
+      <span class="eyebrow">09 — Boundaries</span>
+      <h2 class="section-title">What's Included &amp; What's Not</h2>
+      <p class="lead">Explicit boundaries protect the timeline and the budget. Anything in the right column is either an annex above or a Change Request post-signature.</p>
+    </div>
+
+    <div class="twin">
+      <div class="col-card included">
+        <h3><span class="badge">✓</span> Included in Year 1 (450 KD/mo)</h3>
+        <ul>
+          <li>Odoo V19 installation and core configuration</li>
+          <li>Inventory, purchase, sales, POS, CRM modules</li>
+          <li>Multi-company / multi-store setup</li>
+          <li>Full accounting cycle and standard reports</li>
+          <li><strong>Vendor portal login &amp; KYC onboarding</strong></li>
+          <li><strong>Vendor REST API for product &amp; stock push</strong></li>
+          <li><strong>Central catalog &amp; admin moderation queue</strong></li>
+          <li><strong>Pricing, markup, discounts &amp; offers engine</strong></li>
+          <li><strong>Consignment stock accounting &amp; sold-item ledger</strong></li>
+          <li><strong>Vendor visibility page (stock + sold items + value)</strong></li>
+          <li><strong>Vendor-raised invoice &amp; settlement workflow</strong></li>
+          <li>REST API integration with dealatcity.com</li>
+          <li>UAT support &amp; admin / vendor / end-user training</li>
+          <li>60-day go-live warranty + full Year-1 support</li>
+        </ul>
+      </div>
+
+      <div class="col-card excluded">
+        <h3><span class="badge">×</span> Not Included</h3>
+        <ul>
+          <li>Hosting server (unless managed-hosting line is selected)</li>
+          <li>Server backup solution (client responsibility)</li>
+          <li>SSL certificate procurement and renewal</li>
+          <li>Odoo user licenses (purchased by client directly)</li>
+          <li>Vendor-side integration work (vendor's IT integrates with our API)</li>
+          <li>Vendor mobile app (web portal only in core)</li>
+          <li>Fulfillment Center &amp; Driver app (Annex B)</li>
+          <li>Contact Center subscription (Annex A)</li>
+          <li>Loyalty &amp; Wallet module (Annex C)</li>
+          <li>Third-party gateway / SMS / WhatsApp usage fees</li>
+          <li>Custom features beyond this scope (Change Request)</li>
+          <li>Hardware (POS terminals, scanners, printers)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TERMS ===================== -->
+  <section class="page-break-before">
+    <div class="section-header">
+      <span class="eyebrow">10 — Terms &amp; Conditions</span>
+      <h2 class="section-title">Legal Framework</h2>
+      <p class="lead">The clauses below govern the parties' rights and obligations under this Agreement.</p>
+    </div>
+
+    <div class="terms-grid">
+      <div class="term-block">
+        <h4>1. Scope &amp; Engagement</h4>
+        <p>The Developer shall deliver the scope set out in Sections 04 and 05 of this Agreement within twelve (12) weeks from the Effective Date, in accordance with the timeline in Section 06.</p>
+      </div>
+      <div class="term-block">
+        <h4>2. Fees &amp; Payment</h4>
+        <p>Total Contract Value: 5,400 KD, payable as 450 KD per month for twelve (12) consecutive months from the Effective Date. All payments are non-refundable. Invoices are payable within seven (7) days of issue.</p>
+      </div>
+      <div class="term-block">
+        <h4>3. Late Payment &amp; Suspension</h4>
+        <p>Invoices unpaid beyond fifteen (15) days from due date may result in suspension of services and access until cleared. Persistent delinquency (over 30 days) constitutes material breach under Clause 9.</p>
+      </div>
+      <div class="term-block">
+        <h4>4. Ownership &amp; License</h4>
+        <p>Upon full and final payment, the Client receives a non-exclusive, non-transferable license to use the delivered configuration and custom-developed features. The Developer retains all intellectual property rights to the underlying Odoo framework, reusable libraries, and generic modules.</p>
+      </div>
+      <div class="term-block">
+        <h4>5. Confidentiality</h4>
+        <p>Each party shall protect the trade secrets, proprietary information, and sensitive business details of the other party disclosed under this Agreement. This obligation survives for three (3) years post-termination.</p>
+      </div>
+      <div class="term-block">
+        <h4>6. Warranty &amp; Year-1 Support</h4>
+        <p>The Developer warrants the Software for sixty (60) days from go-live. The 12-month payment plan additionally provides extended support for the remainder of Year 1, including bug fixes and minor adjustments at no further charge.</p>
+      </div>
+      <div class="term-block">
+        <h4>7. Change Requests</h4>
+        <p>Any addition, modification, or removal from the scope shall be documented as a written Change Request, agreed by both parties, and may incur additional fees and timeline adjustments.</p>
+      </div>
+      <div class="term-block">
+        <h4>8. Termination</h4>
+        <p>Either party may terminate this Agreement with written notice if the other breaches a material term and fails to remedy within fourteen (14) days. On termination, accrued fees are payable; future obligations cease.</p>
+      </div>
+      <div class="term-block">
+        <h4>9. Limitation of Liability</h4>
+        <p>The Developer's total aggregate liability under this Agreement shall not exceed the total fees paid by the Client during the twelve (12) months preceding the claim. Neither party shall be liable for indirect, consequential, or loss-of-profit damages.</p>
+      </div>
+      <div class="term-block">
+        <h4>10. Force Majeure</h4>
+        <p>Neither party shall be liable for delay or failure caused by events beyond reasonable control, including acts of government, natural disasters, war, pandemics, or major infrastructure outages. Affected obligations are suspended during the event.</p>
+      </div>
+      <div class="term-block">
+        <h4>11. API &amp; Third-Party Dependencies</h4>
+        <p>Synchronization quality depends on third-party APIs (vendor systems, payment gateways, the DealatCity website). Disruptions in external providers are outside the Developer's control and do not constitute breach.</p>
+      </div>
+      <div class="term-block">
+        <h4>12. Notices &amp; Communication</h4>
+        <p>All formal notices shall be in writing and delivered via email to the parties' representatives stated in Section 01. Email correspondence constitutes valid notice and binding milestone approval.</p>
+      </div>
+      <div class="term-block">
+        <h4>13. Assignment</h4>
+        <p>Neither party may assign this Agreement without the prior written consent of the other, save that the Developer may sub-contract specialised tasks while remaining responsible for delivery.</p>
+      </div>
+      <div class="term-block">
+        <h4>14. Severability &amp; Entire Agreement</h4>
+        <p>If any clause is held unenforceable, the remaining clauses survive. This Agreement, together with any executed Change Requests, constitutes the entire understanding between the parties and supersedes all prior discussions.</p>
+      </div>
+      <div class="term-block">
+        <h4>15. Governing Law &amp; Disputes</h4>
+        <p>This Agreement is governed by the laws of the State of Kuwait. The parties shall first attempt to resolve disputes through good-faith negotiation. Unresolved disputes shall be submitted to arbitration in Kuwait under applicable rules.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXECUTION ===================== -->
+  <section class="page-break-before" style="background: var(--bg-soft);">
+    <div class="section-header">
+      <span class="eyebrow">11 — Execution</span>
+      <h2 class="section-title">In Witness Whereof</h2>
+      <p class="lead">The parties have caused this Agreement to be executed by their duly authorised representatives as of the Effective Date stated above.</p>
+    </div>
+
+    <div class="execution-statement">
+      <p>By signing below, each party acknowledges and agrees that:</p>
+      <ol>
+        <li>It has read, understood, and accepts the scope, timeline, fees, and terms set out in this Agreement (Reference: <strong>CXP-DCT-2026-001</strong>);</li>
+        <li>The signatory below is duly authorised to bind the party on whose behalf they sign;</li>
+        <li>The total contract value of <strong>5,400 KD</strong>, payable as <strong>450 KD per month for twelve (12) consecutive months</strong>, is accepted;</li>
+        <li>This Agreement is binding from the Effective Date of <strong>26 April 2026</strong>.</li>
+      </ol>
+    </div>
+
+    <div class="sign-grid">
+      <div class="sign-block">
+        <span class="role-tag">For &amp; on behalf of the Client</span>
+        <div class="sign-name">DealatCity Gen. Trading Co.</div>
+        <div class="sign-org">Kuwait</div>
+
+        <div style="margin-top:18px;">
+          <div class="sign-line"></div>
+          <div class="sign-label">Authorised Signature</div>
+        </div>
+
+        <div class="sign-row" style="margin-top:14px;">
+          <div>
+            <div class="sign-line"></div>
+            <div class="sign-label">Name</div>
+          </div>
+          <div>
+            <div class="sign-line"></div>
+            <div class="sign-label">Date</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;">
+          <div class="sign-line"></div>
+          <div class="sign-label">Title / Position</div>
+        </div>
+
+        <div style="margin-top:14px;">
+          <div class="sign-line"></div>
+          <div class="sign-label">Company Stamp / Seal</div>
+        </div>
+      </div>
+
+      <div class="sign-block">
+        <span class="role-tag" style="background:var(--accent); color:var(--ink);">For &amp; on behalf of the Developer</span>
+        <div class="sign-name">Centrix Plus Integrated Solution Co.</div>
+        <div class="sign-org">Tareq Faisal — Chief Executive Officer</div>
+
+        <div style="margin-top:18px;">
+          <div class="sign-line"></div>
+          <div class="sign-label">Authorised Signature</div>
+        </div>
+
+        <div class="sign-row" style="margin-top:14px;">
+          <div>
+            <div class="sign-line"></div>
+            <div class="sign-label">Name</div>
+          </div>
+          <div>
+            <div class="sign-line"></div>
+            <div class="sign-label">Date</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;">
+          <div class="sign-line"></div>
+          <div class="sign-label">Title / Position</div>
+        </div>
+
+        <div style="margin-top:14px;">
+          <div class="sign-line"></div>
+          <div class="sign-label">Company Stamp / Seal</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="witness-block">
+      <h3 style="margin-top:24px;">Witnesses</h3>
+      <div class="sign-grid" style="margin-top:14px;">
+        <div class="sign-block" style="padding:18px 22px;">
+          <span class="role-tag" style="background:#475569;">Witness 1</span>
+          <div class="sign-row" style="margin-top:14px;">
+            <div>
+              <div class="sign-line"></div>
+              <div class="sign-label">Signature &amp; Name</div>
+            </div>
+            <div>
+              <div class="sign-line"></div>
+              <div class="sign-label">Date</div>
+            </div>
+          </div>
+        </div>
+        <div class="sign-block" style="padding:18px 22px;">
+          <span class="role-tag" style="background:#475569;">Witness 2</span>
+          <div class="sign-row" style="margin-top:14px;">
+            <div>
+              <div class="sign-line"></div>
+              <div class="sign-label">Signature &amp; Name</div>
+            </div>
+            <div>
+              <div class="sign-line"></div>
+              <div class="sign-label">Date</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <div class="doc-footer">
+    <strong>Software Development Agreement</strong> &nbsp;·&nbsp; CXP-DCT-2026-001 &nbsp;·&nbsp; Centrix Plus × DealatCity &nbsp;·&nbsp; Kuwait &nbsp;·&nbsp; Effective 26 April 2026 &nbsp;·&nbsp; Confidential
+  </div>
+
+</div>
+
+</body>
+</html>
