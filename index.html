@@ -1273,6 +1273,214 @@
   }
   .print-btn:hover { background: var(--brand); }
 
+  /* ============= MOBILE / TABLET RESPONSIVE ============= */
+  @media (max-width: 768px) {
+    html, body { font-size: 13px; }
+    .doc { max-width: 100%; box-shadow: none; }
+
+    section { padding: 30px 18px !important; }
+
+    /* Cover */
+    .cover { padding: 30px 18px !important; }
+    .cover-top {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .doc-meta { text-align: left; }
+    .display { font-size: 24pt !important; line-height: 1.1; }
+    .cover-tag { font-size: 7.5pt; padding: 4px 10px; }
+    .cover-sub { font-size: 11pt; }
+    .parties {
+      grid-template-columns: 1fr;
+      gap: 14px;
+      padding: 16px;
+    }
+    .parties .between { display: none; }
+    .party,
+    .party[style*="text-align:right"] { text-align: left !important; }
+    .stat-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .stat .num { font-size: 16pt; }
+
+    /* Section headers */
+    h2.section-title { font-size: 15pt; }
+    .section-header .lead { font-size: 10.5pt; }
+
+    /* Methodology */
+    .method {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .method-step::before { display: none; }
+
+    /* Scope cards */
+    .scope-card { padding: 18px 16px; }
+    .scope-body {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    .scope-card-head { gap: 10px; }
+    .scope-card-head h3 { font-size: 12pt; }
+
+    /* Exec summary grid */
+    .exec-grid { grid-template-columns: 1fr; gap: 18px; }
+
+    /* Tables — responsive */
+    table.info,
+    .price-table {
+      font-size: 9.5pt;
+    }
+    table.info th,
+    table.info td,
+    .price-table th,
+    .price-table td {
+      padding: 9px 10px;
+    }
+    table.info th { width: 42%; }
+
+    /* Hero — stack */
+    .price-hero {
+      grid-template-columns: 1fr;
+      padding: 22px 20px;
+      gap: 18px;
+    }
+    .price-hero .amount { text-align: left; }
+    .price-hero .big { font-size: 26pt; }
+    .price-hero h3 { font-size: 14pt; }
+
+    /* Stage cards */
+    .payment-stages { grid-template-columns: 1fr; gap: 10px; }
+    .stage-card { padding: 18px 18px; }
+    .stage-card .pct { font-size: 26pt; }
+
+    /* Gantt — stack each row vertically */
+    .gantt-header { display: none; }
+    .gantt-row {
+      grid-template-columns: 1fr;
+      padding: 6px 0;
+    }
+    .gantt-row .phase-name,
+    .gantt-row .bar-cell,
+    .gantt-row .milestone {
+      padding: 6px 14px;
+      text-align: left;
+    }
+    .gantt-row .bar-track { height: 18px; }
+    .gantt > div:last-child { display: none; } /* hide bottom week-axis on mobile */
+
+    /* Install strip — wrap to 3 cols */
+    .install-strip {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    /* Add-ons */
+    .addon-grid { grid-template-columns: 1fr; gap: 10px; }
+
+    /* Twin (in/exc) */
+    .twin { grid-template-columns: 1fr; gap: 14px; }
+
+    /* Terms */
+    .terms-grid { grid-template-columns: 1fr; gap: 10px; }
+
+    /* Flow diagram — stack vertically with down-arrows */
+    .flow-diagram {
+      grid-template-columns: 1fr;
+      gap: 6px;
+      padding: 16px 14px;
+    }
+    .flow-arrow {
+      transform: rotate(90deg);
+      padding: 2px 0;
+      align-self: center;
+    }
+
+    /* Architecture diagram — stack tiers vertically */
+    .arch-diagram {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      padding: 16px 12px;
+    }
+    .arch-flows {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 4px 0;
+      gap: 16px;
+    }
+    .arch-flow {
+      flex: 0 1 auto;
+      padding: 4px 0;
+    }
+    .arch-flow .flow-arrow-line {
+      position: relative;
+      left: auto;
+      right: auto;
+      top: auto;
+      transform: none;
+      display: block;
+      width: 2px;
+      height: 18px;
+      margin: 0 auto;
+    }
+    .arch-flow .flow-arrow-tip {
+      position: relative;
+      right: auto;
+      left: auto;
+      top: auto;
+      transform: rotate(90deg);
+      display: block;
+      text-align: center;
+      margin-top: -2px;
+    }
+    .arch-flow-label {
+      display: block;
+      margin: 6px auto 0 auto;
+      font-size: 7.5pt;
+      max-width: 110px;
+      text-align: center;
+    }
+    .arch-legend { font-size: 8pt; gap: 12px; }
+
+    /* Recitals & execution statement */
+    .execution-statement { padding: 16px 18px; font-size: 10pt; }
+
+    /* Signature blocks — stack */
+    .sign-grid { grid-template-columns: 1fr; gap: 18px; }
+    .sign-block { padding: 22px 20px; }
+    .sign-row { grid-template-columns: 1fr; gap: 14px; }
+
+    /* Footer */
+    .doc-footer { padding: 18px 20px; font-size: 7.5pt; }
+    .doc-footer span,
+    .doc-footer { line-height: 1.6; }
+
+    /* Print button — smaller on mobile */
+    .print-btn {
+      top: 10px;
+      right: 10px;
+      padding: 8px 14px;
+      font-size: 10pt;
+    }
+
+    /* Pillar list spacing */
+    .pillar-list li { font-size: 9.5pt; padding: 10px 12px; }
+  }
+
+  /* Very small phones */
+  @media (max-width: 420px) {
+    .display { font-size: 20pt !important; }
+    .stat .num { font-size: 14pt; }
+    .install-strip { grid-template-columns: repeat(2, 1fr); }
+    .method { grid-template-columns: 1fr; }
+    .stat-grid { grid-template-columns: 1fr; }
+    .price-hero .big { font-size: 22pt; }
+    section { padding: 24px 14px !important; }
+  }
+
   @page {
     size: A4;
     margin: 14mm 12mm 14mm 12mm;
