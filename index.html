@@ -1482,43 +1482,53 @@
     section { padding: 24px 14px !important; }
   }
 
+  /* ============= PRINT / PDF (uniform margins on every page) ============= */
   @page {
-    size: A4;
-    margin: 14mm 12mm 14mm 12mm;
+    size: A4 portrait;
+    margin: 14mm;
   }
-  @page :first {
-    margin: 0;
-  }
+
   @media print {
     html, body {
       background: #fff !important;
       font-size: 10pt;
+      margin: 0 !important;
+      padding: 0 !important;
     }
     .doc {
-      box-shadow: none;
-      max-width: none;
-      margin: 0;
-      width: 100%;
+      box-shadow: none !important;
+      max-width: 100% !important;
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
     }
     .print-btn { display: none !important; }
 
-    /* Sections flow naturally — DON'T avoid breaks on whole sections (some are multi-page) */
+    /* Sections — vertical spacing only; horizontal margin is handled by @page */
     section {
-      padding: 14px 0;
+      padding: 6mm 0 !important;
+      margin: 0 !important;
+      border-bottom: none !important;
       page-break-inside: auto;
       break-inside: auto;
-      border-bottom: none;
     }
 
-    /* Cover page — full bleed, dedicated page, must not split */
+    /* Cover page — fits on page 1 within @page margin (no full-bleed trick, more reliable) */
     .cover {
-      padding: 24mm 16mm;
+      padding: 14mm 12mm !important;
       page-break-after: always;
       break-after: page;
       page-break-inside: avoid;
       break-inside: avoid;
-      min-height: 270mm;
+      min-height: 0 !important;
+      max-height: none !important;
     }
+
+    /* Slightly tighter cover typography for print to ensure single-page fit */
+    .cover .display { font-size: 26pt !important; }
+    .cover .cover-sub { font-size: 10pt !important; }
+    .cover .stat .num { font-size: 16pt !important; }
+    .cover .parties { padding: 14px !important; }
 
     /* Section headers should not get orphaned at bottom of page */
     .section-header,
@@ -1553,7 +1563,7 @@
       break-inside: avoid;
     }
 
-    /* Tables — header repeats on each page, rows don't split */
+    /* Tables — rows don't split, header repeats on continuation */
     table {
       page-break-inside: auto;
       break-inside: auto;
@@ -1562,12 +1572,8 @@
       page-break-inside: avoid;
       break-inside: avoid;
     }
-    thead {
-      display: table-header-group;
-    }
-    tfoot {
-      display: table-footer-group;
-    }
+    thead { display: table-header-group; }
+    tfoot { display: table-footer-group; }
 
     /* Prevent single-line orphans/widows */
     p, li {
@@ -1575,32 +1581,23 @@
       widows: 3;
     }
 
-    /* Force a page break before large sections so they start clean
-       (helps when a previous section ends near bottom of page) */
+    /* Major sections start fresh */
     section.page-break-before {
       page-break-before: always;
       break-before: page;
     }
 
-    /* Final footer should sit with last section */
+    /* Footer sticks with last section */
     .doc-footer {
       page-break-before: avoid;
       break-before: avoid;
     }
 
-    /* Color preservation */
+    /* Color preservation across all renderers */
     * {
       -webkit-print-color-adjust: exact !important;
       print-color-adjust: exact !important;
       color-adjust: exact !important;
-    }
-
-    /* Safety: prevent very tall single elements from being clipped */
-    .scope-card,
-    .price-hero,
-    .col-card {
-      max-height: 260mm;
-      overflow: visible;
     }
   }
 </style>
