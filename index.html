@@ -1623,9 +1623,9 @@
       </div>
     </div>
 
-    <span class="cover-tag">Odoo V19 · Consignment Marketplace · 3PL · Picker Portal</span>
-    <h1 class="display">A Marketplace,<br/>Warehouse &amp; 3PL — One Platform.</h1>
-    <p class="cover-sub">A 16-week implementation delivering a unified consignment marketplace, picker portal with FIFO supplier-lot tracking, full accounting cycle, and a 3PL fulfillment-for-others portal — all on Odoo V19. <strong style="color:#fff;">500 KD / month × 12</strong> &nbsp;·&nbsp; Total contract <strong style="color:#fcd34d;">6,000 KD</strong>.</p>
+    <span class="cover-tag">Odoo V19 · Marketplace · 3PL · POS · Mobile API</span>
+    <h1 class="display">Marketplace, Warehouse,<br/>Store &amp; Mobile — One Platform.</h1>
+    <p class="cover-sub">A 16-week implementation delivering a consignment marketplace, picker portal with FIFO supplier-lot tracking, 3PL fulfillment-for-others portal, Odoo POS for in-store sales, and a mobile-app REST API for the Client's 3rd-party mobile team — all on Odoo V19. <strong style="color:#fff;">500 KD / month × 12</strong> &nbsp;·&nbsp; Total contract <strong style="color:#fcd34d;">6,000 KD</strong>.</p>
 
     <div class="parties">
       <div class="party">
@@ -1711,8 +1711,9 @@
       <ul class="pillar-list">
         <li><strong>Vendor API &amp; Consignment Marketplace</strong>Login, API push, sold-item ledger, vendor invoicing.</li>
         <li><strong>Picker Portal &amp; Warehouse Operations</strong>Picking list, barcode scan verification, packing dashboard.</li>
-        <li><strong>FIFO Supplier-Lot Traceability</strong>Per-lot tracking, supplier-of-record per sale, weighted average cost.</li>
+        <li><strong>FIFO Supplier-Lot Traceability</strong>Per-lot tracking, supplier-of-record per sale, weighted avg cost.</li>
         <li><strong>Fulfillment-for-Others (3PL Portal)</strong>Multi-tenant accounts, Excel/API order upload, live tracking.</li>
+        <li><strong>Odoo POS &amp; Mobile App API</strong>In-store retail checkout + REST API for client's 3rd-party mobile app team.</li>
         <li><strong>Inventory · Multi-Store · Accounting</strong>Full ERP foundation with marketing cost &amp; coupon merchants.</li>
         <li><strong>Website API Sync</strong>Real-time orders, COD updates, products, customers.</li>
       </ul>
@@ -2105,14 +2106,121 @@
       <div class="deliverable-line"><strong>Deliverable</strong>Standard Odoo HR/Payroll module activated and ready to record basic salary entries with notes — no localisation.</div>
     </div>
 
-    <!-- 4.8 TRAINING -->
+    <!-- 4.8 ODOO POS -->
+    <div class="scope-card">
+      <div class="scope-card-head">
+        <div class="scope-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="6" y1="6" x2="6" y2="2"/><line x1="18" y1="6" x2="18" y2="2"/><line x1="7" y1="14" x2="9" y2="14"/><line x1="11" y1="14" x2="13" y2="14"/></svg>
+        </div>
+        <div class="title-block">
+          <div class="index">PILLAR 4.8</div>
+          <h3>Odoo POS · In-Store Sales</h3>
+          <p style="margin:4px 0 0 0; font-size:9.5pt; color:var(--muted);">Standard Odoo POS module activated for in-store retail — barcode-scan checkout, receipts, cash &amp; card payments, daily reconciliation.</p>
+        </div>
+      </div>
+
+      <div class="scope-body">
+        <div>
+          <h4>Checkout &amp; Payments</h4>
+          <ul>
+            <li>Standard Odoo POS UI for cashier terminals (per-store)</li>
+            <li>Per-cashier login with role-based access</li>
+            <li>Barcode scan at checkout with auto stock decrement</li>
+            <li>Cash, card, and split-tender payment flows</li>
+            <li>Discount application at checkout (manual or rule-based)</li>
+            <li>Receipt printing with customer detail capture</li>
+            <li>Returns &amp; exchanges through POS with stock adjustment</li>
+            <li>Walk-in customer creation for member pricing &amp; loyalty (if Annex C added later)</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Operations &amp; Reconciliation</h4>
+          <ul>
+            <li>POS session open / close with cash-in &amp; cash-out tracking</li>
+            <li>End-of-day cash reconciliation &amp; variance reporting</li>
+            <li>POS sales auto-sync to inventory (FIFO supplier-lot consumption applies)</li>
+            <li>POS sales auto-post to accounting journals</li>
+            <li>Per-store POS dashboard (sales, top items, average basket)</li>
+            <li>Multi-store visibility: each store sees only its own sessions</li>
+            <li>Hardware integration setup (scanner, receipt printer, cash drawer) — hardware procured by Client</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modules-tag">
+        <span class="tag">Odoo POS</span>
+        <span class="tag">Barcode Checkout</span>
+        <span class="tag">Cash Reconciliation</span>
+        <span class="tag">Multi-Store</span>
+      </div>
+
+      <div class="deliverable-line"><strong>Deliverable</strong>Odoo POS configured per store with barcode checkout, cash &amp; card flows, end-of-day reconciliation, and inventory + accounting sync.</div>
+    </div>
+
+    <!-- 4.9 MOBILE APP API -->
+    <div class="scope-card">
+      <div class="scope-card-head">
+        <div class="scope-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        </div>
+        <div class="title-block">
+          <div class="index">PILLAR 4.9</div>
+          <h3>Mobile App API for 3rd-Party Mobile Development Team</h3>
+          <p style="margin:4px 0 0 0; font-size:9.5pt; color:var(--muted);">Centrix Plus provides a documented REST API for the Client's third-party mobile app team to consume. The mobile app itself is built by the Client's separate mobile development team — not by Centrix Plus.</p>
+        </div>
+      </div>
+
+      <div class="scope-body">
+        <div>
+          <h4>API Endpoints &amp; Documentation</h4>
+          <ul>
+            <li>REST API for the customer-facing mobile app (iOS &amp; Android)</li>
+            <li>Product catalog: browse, search, filter, detail</li>
+            <li>Customer: registration, login, profile, address book</li>
+            <li>Cart, checkout, payment-intent creation</li>
+            <li>Order tracking: status, history, live updates</li>
+            <li>Push-notification trigger events (order placed, picked, delivered)</li>
+            <li>Token-based authentication for app users</li>
+            <li>Documented OpenAPI / Swagger specification</li>
+            <li>Sandbox / test environment for the mobile dev team</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Integration Support</h4>
+          <ul>
+            <li>Technical support to the mobile dev team during integration</li>
+            <li>Sample request / response examples per endpoint</li>
+            <li>Postman collection for endpoint testing</li>
+            <li>Webhook callbacks to mobile backend on key events</li>
+            <li>Rate-limiting, request signing, and security guidelines</li>
+            <li>Versioning strategy &amp; deprecation policy</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:14px;">
+        <strong>Important:</strong> The mobile app development (iOS / Android implementation, UX, app-store submission, push-notification infrastructure, in-app purchases, etc.) is the responsibility of the Client's third-party mobile development team and is <strong>NOT included</strong> in this Agreement. Centrix Plus delivers and maintains only the server-side API and documentation.
+      </div>
+
+      <div class="modules-tag">
+        <span class="tag">REST API</span>
+        <span class="tag">OpenAPI Spec</span>
+        <span class="tag">Sandbox</span>
+        <span class="tag">Webhooks</span>
+        <span class="tag">3rd-Party Enablement</span>
+      </div>
+
+      <div class="deliverable-line"><strong>Deliverable</strong>Documented mobile-app API live with sandbox; mobile dev team enabled to build the iOS &amp; Android app against it.</div>
+    </div>
+
+    <!-- 4.10 TRAINING -->
     <div class="scope-card">
       <div class="scope-card-head">
         <div class="scope-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
         </div>
         <div class="title-block">
-          <div class="index">PILLAR 4.8</div>
+          <div class="index">PILLAR 4.10</div>
           <h3>Training, Documentation & Handover</h3>
           <p style="margin:4px 0 0 0; font-size:9.5pt; color:var(--muted);">Build capability into the team, not dependency on the vendor.</p>
         </div>
@@ -2739,7 +2847,7 @@
       <div class="gantt-row">
         <div class="phase-name">
           <strong>Phase 2 · Core ERP Foundation</strong>
-          <span>Multi-co, inventory, accounting base, lot tracking, shelf locations, stock reservation</span>
+          <span>Multi-co, inventory, accounting base, lot tracking, shelf locations, stock reservation, Odoo POS</span>
         </div>
         <div class="bar-cell">
           <div class="bar-track"><div class="bar" style="left:6.25%; width:18.75%;">W2 – W4</div></div>
@@ -2793,8 +2901,8 @@
 
       <div class="gantt-row">
         <div class="phase-name">
-          <strong>Phase 7 · Website API, COD, Marketing, Coupons, Payroll</strong>
-          <span>Real-time sync, COD updates, marketing cost, coupon merchants, basic payroll</span>
+          <strong>Phase 7 · Website API, Mobile API, COD &amp; Final Integrations</strong>
+          <span>Website real-time sync, mobile app API + sandbox, COD updates, marketing cost, coupon merchants, basic payroll</span>
         </div>
         <div class="bar-cell">
           <div class="bar-track"><div class="bar" style="left:62.5%; width:18.75%;">W11 – W13</div></div>
@@ -2992,6 +3100,8 @@
           <li><strong>Picker portal: scan-verified picking &amp; packing dashboard</strong></li>
           <li><strong>FIFO supplier-lot traceability with audit history</strong></li>
           <li><strong>3PL multi-tenant portal (Excel + API order submission)</strong></li>
+          <li><strong>Odoo POS module for in-store sales (per-store terminals)</strong></li>
+          <li><strong>Mobile App REST API + sandbox for 3rd-party mobile dev team</strong></li>
           <li>Basic Odoo Payroll module (standard, no Kuwait localisation)</li>
           <li>Website API: real-time sync + COD updates</li>
           <li>UAT support &amp; admin / vendor / tenant / end-user training</li>
@@ -3011,8 +3121,10 @@
           <li>Customer Loyalty &amp; Wallet module (Annex C)</li>
           <li>Vendor-side integration work (vendor's IT integrates with our API)</li>
           <li>Tenant-side integration work (3PL tenant's IT integrates with our API)</li>
+          <li><strong>Mobile app development (iOS / Android) — built by Client's 3rd-party mobile dev team using our API</strong></li>
           <li>Vendor / tenant mobile apps (web portals only in core)</li>
           <li>Mobile picker app (web-based picker portal in core)</li>
+          <li>POS hardware: terminals, barcode scanners, receipt printers, cash drawers (Client procures)</li>
           <li>Custom marketing-analytics dashboards beyond standard P&amp;L</li>
           <li>Third-party gateway / SMS usage fees</li>
           <li>Custom features beyond this scope (Change Request)</li>
@@ -3080,15 +3192,19 @@
         <p>All formal notices shall be in writing and delivered via email to the parties' representatives stated in Section 01. Email correspondence constitutes valid notice and binding milestone approval.</p>
       </div>
       <div class="term-block">
-        <h4>13. Assignment</h4>
+        <h4>13. Mobile App Responsibility Split</h4>
+        <p>The Developer shall deliver and maintain a documented REST API and sandbox environment for the Client's third-party mobile app development team. The mobile application itself (iOS / Android implementation, UX, app-store submissions, push notifications, in-app purchases) is the sole responsibility of the Client's third-party team and is excluded from this Agreement.</p>
+      </div>
+      <div class="term-block">
+        <h4>14. Assignment</h4>
         <p>Neither party may assign this Agreement without the prior written consent of the other, save that the Developer may sub-contract specialised tasks while remaining responsible for delivery.</p>
       </div>
       <div class="term-block">
-        <h4>14. Severability &amp; Entire Agreement</h4>
+        <h4>15. Severability &amp; Entire Agreement</h4>
         <p>If any clause is held unenforceable, the remaining clauses survive. This Agreement, together with any executed Change Requests, constitutes the entire understanding between the parties and supersedes all prior discussions.</p>
       </div>
       <div class="term-block">
-        <h4>15. Governing Law &amp; Disputes</h4>
+        <h4>16. Governing Law &amp; Disputes</h4>
         <p>This Agreement is governed by the laws of the State of Kuwait. The parties shall first attempt to resolve disputes through good-faith negotiation. Unresolved disputes shall be submitted to arbitration in Kuwait under applicable rules.</p>
       </div>
     </div>
